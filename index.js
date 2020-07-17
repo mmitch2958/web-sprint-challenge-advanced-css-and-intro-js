@@ -258,11 +258,6 @@ for (i = 0; i <= artists.length-1; i++) {
 }
 
 console.log(get20s);
-
-/* Code here */
-
-
-
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
  *     (1) artists array
  *     (2) a number which is the desired index in the array.
@@ -273,9 +268,13 @@ console.log(get20s);
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
-function removeArtist(/*code here*/) {
-  /* code here */
+
+function removeArtist(array, delind) {
+  array.splice(delind, 1);
 }
+
+console.log(removeArtist(artists, 0));
+console.log(artists); 
 
 
 
@@ -292,11 +291,21 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(/* Code here */) {
+function addArtist(id, name, years, genre, nationality, bio) {
+  artists.push(...items,{
+    id: id,
+    name: name,
+    years: years,
+    genre: genre,
+    nationality: nationality,
+    bio: bio,
+  }) ;
 
-  /* Code here */
-
+  return artists;
 }
+  
+console.log(addArtist(20, 'mike', '1984-288', 'modern', 'italian', 'yo vip lets kick it'));
+
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
@@ -306,9 +315,11 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(/* Code here */) {
-
-  /* Code here */
+function lotsOfArt(array, numPaint) {
+  for (let i = 0; i < arr.length; i++)  
+    if (array[i].includes(paintings) >= 99) {
+      
+  
 
 }
 
