@@ -219,6 +219,8 @@ Use an array method to fix this issue and console.log() to check your work. */
 
 function changeName(array, index, name){
   array[index].name = name;
+  let delarray = index - 1;
+  array.splice(delarray, 1);
   return array;
 }
 console.log(changeName(artists, 9, 'Vincent Van Gogh'));
@@ -329,7 +331,7 @@ function lotsOfArt() {
 console.log(lotsOfArt);
  
   
-
+/
 // 🎨🎨 STRETCH 🎨🎨//
 
 
