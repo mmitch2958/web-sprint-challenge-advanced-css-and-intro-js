@@ -315,15 +315,20 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(array, numPaint) {
-  for (let i = 0; i < arr.length; i++)  
-    if (array[i].includes(paintings) >= 99) {
-      
-  
-
+// create my new array
+const the100club = [];
+function lotsOfArt() {
+  // loop through the places array
+  for (let i = 0; i < artists.length; i++) {
+    // write a conditional that will check if the region is north america, if it is, push the city to the new array
+    if (artists[i].paintings >= 99) {
+      the100club.push(artists[i].name);
+    }
+  }
 }
-
-
+console.log(lotsOfArt);
+ 
+  
 
 // 🎨🎨 STRETCH 🎨🎨//
 
