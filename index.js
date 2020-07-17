@@ -213,10 +213,15 @@ console.log(artists[2].bio)
 
 
 
-/* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
-artists.splice(9, 1, { name: "Vincent Van Dough" }[]{ name: "Vincent Van Gogh" }[]);
+/* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. 
+Use an array method to fix this issue and console.log() to check your work. */
 
 
+function changeName(array, index, name){
+  array[index].name = name;
+  return array;
+}
+console.log(changeName(artists, 9, 'Vincent Van Gogh'));
 
 /* Task 3: Create a function called `getArtistByIndex` that takes two arguments:
  *     (1) artists array
@@ -226,25 +231,33 @@ artists.splice(9, 1, { name: "Vincent Van Dough" }[]{ name: "Vincent Van Gogh" }
  * For example, if getArtistByIndex is invoked with the artists dataset and the number 0,
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
-function getArtistByIndex(arr, index) {
-  var index = [i];
-  return ("the artist at index ", (arr.index), "is"(arr.name));
+ function getArtistByIndex(arr, index) {
+   var artName = arr[index].name;
+   var ret = "The artist at index " + (index)
+   var retName = " is " + (artName)
+   return ret + retName
 }
-
-/**
+console.log(getArtistByIndex(artists, 0))
+// /**
 
 
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names 
 of artists who were born in and died in 20th century (1900-2000) example born in 1901 and died in 1959
 - included / born in 1889 and died in 1925 not included - should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(newArr) {
-  for (let i = 0; i < arr.length; i++) {
-    if (newArr.includes(19));
-    let newArr = arr.name;
+const get20s = [];
+
+for (i = 0; i <= artists.length-1; i++) {
+  console.log(artists[i].years);
+  if(artists[i].years == '1907 - 1954'){
+    get20s.push(artists[i].name);
+  }
+  if(artists[i].years == '1904 - 1989'){
+    get20s.push(artists[i].name);
   }
 }
-retrun newArr[]
+
+console.log(get20s);
 
 /* Code here */
 
